@@ -18,6 +18,7 @@
                 let result = '';
 
                 if((playerMove==='scissors' && computerMove === 'paper') || (playerMove === 'paper' && computerMove === 'rock') || (playerMove === 'rock' && computerMove === 'scissors')){
+                    // true or false or false 
                     result = 'You Win!!!';
                 }else if(playerMove === computerMove){
                     result = 'Tie.';
@@ -30,6 +31,7 @@
 
             function pickComputerMove() {
                 const randomNumber = Math.ceil(Math.random() * 3);
+            
                 console.log(randomNumber);
 
                 let computerMove = ''; //this is a global variable, it can be everywhere

@@ -372,6 +372,8 @@ console.log(newSet);
 console.log(newSet.size);
 newSet.add(5);
 
+
+//Recreating sorting method I have used before
 let srtArray = [2, 5, 1, 4, 3];
 
 let sortCB = (a, b) => {
@@ -384,7 +386,6 @@ function sort(callback, array) {
             let itemp = array[i];
             let ii = i + 1;
             console.log(`temp:  ${itemp} ii:  ${array[ii]}`);
-            // console.log(callback(itemp, array[ii]));
             if (callback(array[i], array[ii]) >= 0) {
                 console.log(`iteration:  ${i}`);
                 array[i] = array[ii];
