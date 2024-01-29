@@ -4,7 +4,7 @@ const toggleHiddenElement = (domElement) => {
       domElement.style.display = 'block';
     } else {
       domElement.style.display = 'none';
-    }d
+    }
 }
 
 const changeToFunkyColor = (domElement) => {
@@ -13,7 +13,12 @@ const changeToFunkyColor = (domElement) => {
     const b = Math.random() * 255;
           
     domElement.style.background = `rgb(${r}, ${g}, ${b})`;
-}
-  
 
-export { toggleHiddenElement, changeToFunkyColor };
+}
+
+const resources = {
+    toggleHiddenElement,
+    changeToFunkyColor
+}
+
+export default resources;

@@ -1,10 +1,11 @@
 /* secret-messages.js */
-import { toggleHiddenElement, changeToFunkyColor } from "./dom-function.js";
+import { default as DOMFunctions } from "./dom-function.js";
 
+const { toggleHiddenElement, changeToFunkyColor} = DOMFunctions;
 const buttonElement = document.getElementById('secret-button');
 const pElement = document.getElementById('secret-p');
 
 buttonElement.addEventListener('click', () => {
-  toggleHiddenElement(pElement);
-  changeToFunkyColor(pElement);
+    toggleHiddenElement(pElement);
+    changeToFunkyColor(pElement);
 });
