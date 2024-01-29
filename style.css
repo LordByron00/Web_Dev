@@ -26,6 +26,7 @@
         .logo {
             max-width: 50px;
             height: auto;
+            cursor: pointer;
         }
         .nav_menu a {
             text-decoration: none;
@@ -227,12 +228,12 @@
             background-color: rgb(30, 29, 29);
             border-radius: 1px;
         }
-        .about_img {
-            padding: 25px;
-            background-color: rgb(24, 24, 24);
+        .about_img {    
+            padding: 25px;  
+            background-color: rgb(11, 11, 11);
             border-radius: 50%;
-            border: 1px rgb(23, 23, 23) solid;
-            box-shadow: 0px 0px 25px 5px rgb(29, 28, 28) ;
+            border: 1px rgb(0, 0, 0) solid;
+            box-shadow: 0px 0px 25px 5px rgb(22, 22, 22) ;
         }
         .about_img img {
             padding: 10px;
@@ -268,6 +269,7 @@
             flex: 1;
         }
         .project_Container p {
+            height: 300px;
             padding: 5px 50px;
             color: white;
         }
@@ -279,7 +281,11 @@
             font-size: large;
             color: rgb(36, 98, 64)
         }
-  
+        .project {
+            background-color: #0b0d0e;
+            border-radius: 15px;
+            margin: 0 15px;
+        }
    
         .coverContainer {
             display: flex;
@@ -300,7 +306,9 @@
         }
 
         .info h2 {
-            color: rgb(152, 1, 1);
+            color: rgb(103, 10, 10);
+            font-family: Adelia;
+            font-size: 40px;
         }
         .info img {
             width: 10em;
