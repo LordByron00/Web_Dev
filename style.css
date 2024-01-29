@@ -1,6 +1,6 @@
  @font-face {
         font-family: 'Adelia'; /* Choose a name for your font family */
-        src: url('/dead_revolution/Dead\ Revolution.otf') format('opentype');/* Add additional formats if necessary */
+        src: url('./dead_revolution/Dead\ Revolution.otf') format('opentype');/* Add additional formats if necessary */
         }
 
         html, body {
