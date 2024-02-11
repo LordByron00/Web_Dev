@@ -295,6 +295,7 @@
             /* padding: 10px; */
             /* border: 2px solid #b5b5b5; */
             opacity: 0.9;
+            flex: 1;
             }
         
         .coverContainer img {
