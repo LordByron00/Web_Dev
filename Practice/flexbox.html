@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html, body {
+            width: 100vw;
+            height: 100vh;
+        }
+        .parent {
+            display: flex;
+            background-color: black;
+            width: 100vw;
+            height: 100px;
+        }
+        .child {
+            display: inline-flex;
+            width: 75px;
+            height: 75px;
+            border: 4px solid rgb(0, 0, 0);
+            background-color: rgb(0, 0, 102);
+        }
+        h2 {
+            text-align: center;
+            color: rgb(255, 19, 62);
+            background-color: rgb(98, 224, 255);
+        }
+        .flexstart {
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+        .center {
+            justify-content: center;
+            align-items: center;
+        }
+        .flexend {
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+        .spacebetween {
+            justify-content: space-between;
+            align-items: baseline;
+        }
+        .spacearound {
+            justify-content: space-around;
+            align-items: stretch; /* default */
+            /* stretch — if possible, the items will stretch from top to bottom of the container. 
+            Specified height will not stretch; elements with a minimum height or no height specified will stretch. */
+        }
+        .spaceevenly {
+            justify-content: space-evenly;
+            align-items: end;
+        }
+        .flexgrow {
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; color: aqua; background-color: rgb(7, 22, 26);">CSS FLEX-BOX</h1>
+    <div class="parent">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+    <h1 style="text-align: center; color: rgb(102, 117, 123); background-color: rgb(45, 3, 3);">JUSTIFY-CONTENT AND ALIGN-ITEMS</h1>
+    <h2>Flex-start</h2>
+    <div class="parent flexstart">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+    <h2>Center</h2>
+    <div class="parent center">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+    <h2>Flex-end</h2>
+    <div class="parent flexend">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+    <h2>Space-between & baseline</h2>
+    <div class="parent spacebetween">
+        <div class="child" style="height: 90px;"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+    <h2>Space-around & stretch</h2>
+    <div class="parent spacearound">
+        <div class="child"></div>
+        <div class="child" style="height: auto;"></div>
+        <div class="child"></div>
+    </div>
+    <h2>Space-evenly & safe</h2>
+    <div class="parent spaceevenly">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+    <h1>Flex Grow</h1>
+    <h2></h2>
+    <div class="parent">
+        <div class="child flexgrow"></div>
+        <div class="child flexgrow"></div>
+        <div class="child flexgrow"></div>
+    </div>
+</body>
+</html>
