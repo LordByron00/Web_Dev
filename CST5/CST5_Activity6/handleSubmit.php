@@ -1,0 +1,71 @@
+<?php 
+    include "DB.php";
+    $dept_ID = "";
+    $dept_Name = "";
+    $Loc = "";
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        if (isset($_POST["save_Rec"])) {
+            if (!empty($_POST['d_ID']) && !empty($_POST['d_Name']) && !empty($_POST['d_Loc'])) {
+                $dept_ID = $_POST['d_ID'];
+                $dept_Name = $_POST['d_Name'];
+                $loc = $_POST['d_Loc'];
+
+                $sql = "INSERT INTO bayron (dept_ID, dept_Name, dept_Loc)
+                VALUES ('$dept_ID', '$dept_Name', '$Loc')";
+                if ($conn->query($sql) === TRUE) {
+                    $messAlert= "<script>alert('Record Successfully Created...')</script>";
+                    echo $messAlert;
+                } else {
+                    echo "Error: " . $sql . "<br>" . $conn->error;
+                }      
+            } else {
+                echo "<script>alert('Fill all the blanks!')</script>";
+            }
+        } elseif(isset($_POST['search_Rec'])) {
+            if (empty($_POST['d_ID'])) {
+                echo "<script>alert('Input an ID!')</script>";
+            } else {
+                $dept_ID = $_POST['d_ID'];
+                $sql = "SELECT * FROM bayron WHERE dept_ID = $dept_ID";
+                $result = $conn->query($sql);
+                if ($result->num_rows > 0) {
+                    while($row = $result->fetch_assoc()) {
+                        $dept_ID = $row['dept_ID'];
+                        $dept_Name = $row['dept_Name'];
+                        $Loc = $row['dept_Loc'];
+                    }
+                } else {
+                    echo "0 results";
+                }
+            }
+        } elseif(isset($_POST['update_Rec'])) {
+            if (!empty($_POST['d_ID']) && !empty($_POST['d_Name']) && !empty($_POST['d_Loc'])) {
+                $dept_ID = $_POST['d_ID'];
+                $dept_Name = $_POST['d_Name'];
+                $loc = $_POST['d_Loc'];
+
+                $sql = "UPDATE bayron 
+                SET dept_Name = $dept_Name, dept_Loc = $loc 
+                WHERE dept_ID = $dept_ID";
+
+                $result = $conn->query($sql);
+
+                if ($conn->query($sql) === TRUE) {
+                    $messAlert= "<script>alert('Record Successfully Edited...')</script>";
+                    echo $messAlert;
+                } else {
+                    echo "Invalid ID";
+                }
+            } else {
+                echo "<script>alert('Fill in the blanks!')</script>";
+                
+            }
+        }
+    } 
+
+
+    $conn->close();
+
+
+?>
