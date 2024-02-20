@@ -108,8 +108,9 @@ input {
     justify-content: space-evenly;
 }
 
-.buttons .SSdiv {
+.SSdiv {
     display: flex;
+    width: 70%;
     justify-content: space-evenly;
 }
 

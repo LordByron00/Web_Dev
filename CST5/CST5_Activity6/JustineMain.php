@@ -33,13 +33,18 @@
                     <div class="SSdiv">
                         <input type="submit" name="save_Rec" value="Save">
                         <input type="submit" name="search_Rec" value="Search">
+                    </div>
+                    <div class="SSdiv">
                         <input type="submit" name="update_Rec" value="Update">
                         <input type="submit" name="del_Rec" value="Delete">
                     </div>
-                    <input type="submit" value="Close" class="close">
+                    <!-- <input type="submit" value="Close" class="close"> -->
                 </div>
             </form>
         </div>
     </div>
+    <script>
+
+    </script>
 </body>
 </html>
