@@ -1,0 +1,121 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    background: linear-gradient(to bottom right, #808080 50%, #333333 50%);
+    font-family: 'Bebas Neue', sans-serif;
+    position: relative;
+}
+
+.header {
+    width: 100%;
+    background-color: #1b1919;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+}
+
+.logo {
+    max-width: 180px;
+    max-height: 180px;
+}
+
+.logout-btn,
+.button {
+    font-family: 'Bebas Neue', sans-serif;
+    color: white;
+    border: none;
+    background-color: rgb(65, 105, 225);
+    cursor: pointer;
+    font-size: 110%;
+    padding: 6px 10px;
+    border-radius: 10px;
+}
+
+.button:hover {
+    background-color: rgb(56, 93, 201);
+}
+
+.logout-btn {
+    background: none;
+}
+
+.table-container {
+    background-color: rgb(85, 85, 85);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 80px;
+    margin-bottom: 20px;
+    overflow-x: auto;
+    width: 65%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: white;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #000000;
+    color: white;
+    position: relative;
+    cursor: pointer;
+}
+
+.add-product-btn,
+.action-buttons button {
+    margin-left: 8px;
+    padding: 6px 10px;
+    border-radius: 10px;
+}
+
+.sort-icon {
+    position: absolute;
+    top: 50%;
+    right: 6px;
+    transform: translateY(-50%);
+}
+
+.product-image {
+    max-width: 40px;
+    max-height: 40px;
+    display: none;
+}
+
+.search-bar {
+    padding: 6px;
+    width: 40%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.search-bar-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    border-radius: 10px;
+}

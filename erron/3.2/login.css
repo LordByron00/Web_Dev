@@ -1,0 +1,56 @@
+/* wow */
+
+.header {
+    width: 100%;
+    background-color: #1b1919;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+}
+
+.logo {
+    max-width: 180px;
+    max-height: 180px;
+}
+
+body {
+    background: linear-gradient(to bottom right, #808080 50%, #333333 50%);
+    font-family: 'Bebas Neue', sans-serif;
+    border-top: 80px solid #1b1919;
+}
+
+.container {
+    margin-top: 150px;
+}
+
+input {
+    max-width: 300px;
+    min-width: 300px;
+    padding-right: 40px;
+    /* Adjust the padding to accommodate the icon */
+}
+
+.btn-success {
+    background-color: rgb(65, 105, 225);
+    margin-top: 20px;
+}
+
+.password-container {
+    position: relative;
+    display: inline-block;
+}
+
+#eyeIcon {
+    position: absolute;
+    left: 89%;
+    /* Adjust this value as needed */
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    max-width: 22px;
+    max-height: 22px;
+}

@@ -1,0 +1,11 @@
+# Ignore compiled files
+*.class
+.env
+# Ignore logs and temporary files
+/logs/
+/temp/
+
+# Ignore configuration files
+config.ini
+
+*.zip
