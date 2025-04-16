@@ -1,22 +1,17 @@
 <?php
 
+use App\Http\Controllers\messageController;
+use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
+use App\Models\Message;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+// Route::get('/user/{username?}', function (?string $username = 'Justine') {
+//     return 'Hello World ' . $username;
+// })->where('username', '[A-Z]+');
 
-Route::view('/', 'welcome');
+Route::get('/contact', [messageController::class, 'showForm']);
 
-Route::get('/user/{username?}', function (?string $username = 'Justine') {
-    return 'Hello World ' . $username;
-})->where('username', '[A-Z]+');
+Route::post('/contact', [messageController::class, 'storeMessage']);
 
-
-Route::get('/whatever', function () {
-    return view('whatever');
-})->name('whatever'); 
-
-$url = route('whatever');
-
-Route::redirect('/x', '/whatever'); 
+Route::get('/messages', [messageController::class, 'getMessages']);
