@@ -14,20 +14,22 @@ body {
   align-items: center;
 }
 
-.App {
+/* .App {
   text-align: center;
-}
+} */
+
 
 h1 {
   color: #fffdfd;
   margin-bottom: 0.5rem;
   font-size: 2rem;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .TodoWrapper {
-  max-width: 35vw;
-  width: 35vw;
+  max-width: 50vw;
+  width: 40vw;
   background: #1A1A40;
   margin-top: 5rem;
   padding: 2rem;

@@ -20,8 +20,7 @@ export const TodoEditForm = ({task, editTodo, updateTodo}) => {
       <input className='todo-input' placeholder={task.task} onChange={(e) => {
         setValue(e.target.value);
       }} />
-      <button type='button' className='todo-btn' onClick={cancelEdit}>Cancel</button>
-      <button type='submit' className='todo-btn'>Update Task</button>
+      <button type='button' className='todo-btn' onClick={cancelEdit}>Edit Task</button>
     </form>
   )
 }
