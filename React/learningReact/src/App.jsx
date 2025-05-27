@@ -4,18 +4,17 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import MyButton  from './components/MyButton';
 import Profile from '../Learn/profile';
-
-
-
+import LoginForm from './components/loginForm';
 
 function App() {
   const [count, setCount] = useState(0)
+  const authenticated = true;
 
   return (
     <>
     <div>
       <div className='header'>
-        <Profile />
+        {authenticated ? <Profile /> : <LoginForm/>}
       </div>
       <h2>Learning react from scratch</h2>
       <MyButton />
