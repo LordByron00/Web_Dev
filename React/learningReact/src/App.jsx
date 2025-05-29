@@ -17,7 +17,8 @@ function App() {
         {authenticated ? <Profile /> : <LoginForm/>}
       </div>
       <h2>Learning react from scratch</h2>
-      <MyButton />
+      <p>{count}</p>
+      <MyButton setCounter={setCount} count={count}/>
     </div>
     </>
   )

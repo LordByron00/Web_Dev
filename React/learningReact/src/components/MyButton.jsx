@@ -1,5 +1,5 @@
-export default function MyButton() {
+export default function MyButton({setCounter, count}) {
     return (
-        <button>I am a button</button>
+        <button onClick={() => setCounter(count + 1 )}>Set Count</button>
     );
 }
