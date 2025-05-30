@@ -8,7 +8,7 @@ export default function Profile() {
     return (
         <>
             <h1>{user.name}</h1>
-            <img className="avatar" src={user.imageURL} alt={user.imageURL} style={{width: user.imageSize, height: user.imageSize}} />
+            <img className="rounded-full" src={user.imageURL} alt={user.imageURL} style={{width: user.imageSize, height: user.imageSize}} />
         </>
     );
 };
