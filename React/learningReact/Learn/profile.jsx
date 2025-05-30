@@ -4,10 +4,10 @@ const user = {
     imageSize: 90,
 };
 
-export default function Profile() {
+export default function Profile({name}) {
     return (
         <>
-            <h1>{user.name}</h1>
+            <h1>{name}</h1>
             <img className="rounded-full" src={user.imageURL} alt={user.imageURL} style={{width: user.imageSize, height: user.imageSize}} />
         </>
     );
