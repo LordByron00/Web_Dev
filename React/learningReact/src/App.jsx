@@ -9,6 +9,8 @@ import CountButton from './components/CountButton';
 import ProfileForm from './components/profileForm';
 import AlertButton from './components/Learn/alertButton';
 import PreventForm from './components/Learn/PreventForm';
+import LiveInput from './components/Learn/LiveInput';
+import TodoApp from './components/Learn/simpleTodoApp';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,7 +20,7 @@ function App() {
 
   useEffect(() => {
     function handleScroll() {
-      alert('Scrolled!');
+      console.log('Scrolled!');
     }
 
     window.addEventListener('scroll', handleScroll)
@@ -26,8 +28,8 @@ function App() {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     }
-    
-  });
+
+  }, []);
 
   return (
     <>
@@ -45,6 +47,8 @@ function App() {
       <CountButton buttonName={'local Count Button 2'}></CountButton><br />
       <AlertButton person={'Justine'}></AlertButton>
       <PreventForm></PreventForm>
+      <LiveInput></LiveInput>
+      <TodoApp></TodoApp>
     </div>
     </>
   )
