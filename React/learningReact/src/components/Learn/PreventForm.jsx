@@ -6,6 +6,7 @@ const PreventForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         alert('Form submitted without reload!');
+        alert(`Name: ${name}`);
         console.log('Form submitted without reload!');
     }
 
