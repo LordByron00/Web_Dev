@@ -8,6 +8,7 @@ import LoginForm from './components/loginForm';
 import CountButton from './components/CountButton';
 import ProfileForm from './components/profileForm';
 import AlertButton from './components/Learn/alertButton';
+import PreventForm from './components/Learn/PreventForm';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -33,7 +34,8 @@ function App() {
       <MyButton setCounter={setCount} count={count} name={'2'}/>
       <CountButton buttonName={'local Count Button 1'}></CountButton>
       <CountButton buttonName={'local Count Button 2'}></CountButton><br />
-      <AlertButton></AlertButton>
+      <AlertButton person={'Justine'}></AlertButton>
+      <PreventForm></PreventForm>
     </div>
     </>
   )
