@@ -3,10 +3,11 @@ import { useEffect, useState } from 'react'
 // import viteLogo from '/vite.svg'
 import './App.css'
 import MyButton  from './components/MyButton';
-import Profile from '../Learn/profile';
+import Profile from './components/Learn/profile';
 import LoginForm from './components/loginForm';
 import CountButton from './components/CountButton';
 import ProfileForm from './components/profileForm';
+import AlertButton from './components/Learn/alertButton';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -31,7 +32,8 @@ function App() {
       <MyButton setCounter={setCount} count={count} name={'1'}/> <br /><br />
       <MyButton setCounter={setCount} count={count} name={'2'}/>
       <CountButton buttonName={'local Count Button 1'}></CountButton>
-      <CountButton buttonName={'local Count Button 2'}></CountButton>
+      <CountButton buttonName={'local Count Button 2'}></CountButton><br />
+      <AlertButton></AlertButton>
     </div>
     </>
   )
