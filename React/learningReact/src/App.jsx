@@ -13,6 +13,7 @@ import LiveInput from './components/Learn/LiveInput';
 import TodoApp from './components/Learn/simpleTodoApp';
 import Timer from './components/Learn/timer';
 import InlineBox from './components/Learn/inlineStyledBox';
+import Card from './components/Learn/Card/Card';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -54,6 +55,7 @@ function App() {
       <Timer></Timer>
       <InlineBox isActive={true}></InlineBox>
       <InlineBox isActive={false}></InlineBox>
+      <Card></Card>
     </div>
     </>
   )
