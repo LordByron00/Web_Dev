@@ -9,6 +9,7 @@ const LiveInput = () => {
 
     return(
         <>
+        <p>Text length:{text.length}</p>
         <p>Text: {text}</p>
         <label htmlFor="text">Input:</label>
         <input type="text" value={text} onChange={handleChange} />

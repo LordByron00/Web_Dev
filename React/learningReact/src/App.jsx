@@ -11,6 +11,7 @@ import AlertButton from './components/Learn/alertButton';
 import PreventForm from './components/Learn/PreventForm';
 import LiveInput from './components/Learn/LiveInput';
 import TodoApp from './components/Learn/simpleTodoApp';
+import Timer from './components/Learn/timer';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -49,6 +50,7 @@ function App() {
       <PreventForm></PreventForm>
       <LiveInput></LiveInput>
       <TodoApp></TodoApp>
+      <Timer></Timer>
     </div>
     </>
   )

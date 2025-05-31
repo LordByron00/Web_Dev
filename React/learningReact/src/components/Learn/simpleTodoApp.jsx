@@ -23,6 +23,12 @@ const TodoApp = () => {
         setTask('');
     }
 
+    function handleEnter(e) {
+        if (e.key === 'Enter') {
+            addTask();
+        }
+    }
+
     return (
         <>
 
@@ -33,7 +39,7 @@ const TodoApp = () => {
         </ul>
 
         <span>TASK:</span>
-        <input type="text" name="task" id="task" value={task} onChange={e => setTask(e.target.value)} /> <br />
+        <input type="text" name="task" id="task" value={task} onChange={e => setTask(e.target.value)} onKeyDown={handleEnter} /> <br />
         <input type="button" value="ADD TASK" onClick={addTask}/>
 
         </>
