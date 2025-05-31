@@ -12,6 +12,7 @@ import PreventForm from './components/Learn/PreventForm';
 import LiveInput from './components/Learn/LiveInput';
 import TodoApp from './components/Learn/simpleTodoApp';
 import Timer from './components/Learn/timer';
+import InlineBox from './components/Learn/inlineStyledBox';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -51,6 +52,8 @@ function App() {
       <LiveInput></LiveInput>
       <TodoApp></TodoApp>
       <Timer></Timer>
+      <InlineBox isActive={true}></InlineBox>
+      <InlineBox isActive={false}></InlineBox>
     </div>
     </>
   )
