@@ -17,7 +17,16 @@ function App() {
   const authenticated = true;
 
   useEffect(() => {
+    function handleScroll() {
+      alert('Scrolled!');
+    }
 
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    }
+    
   });
 
   return (
