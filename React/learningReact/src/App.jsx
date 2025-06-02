@@ -14,6 +14,7 @@ import TodoApp from './components/Learn/simpleTodoApp';
 import Timer from './components/Learn/timer';
 import InlineBox from './components/Learn/inlineStyledBox';
 import Card from './components/Learn/Card/Card';
+import Button from './components/Learn/StyledButton/Button';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -56,6 +57,8 @@ function App() {
       <InlineBox isActive={true}></InlineBox>
       <InlineBox isActive={false}></InlineBox>
       <Card></Card>
+      <Button buttonName={'Styled Button'} primary={true} setCount={setCount} count={count}></Button>
+      <Button buttonName={'Styled Button'} primary={false} setCount={setCount} count={count}></Button>
     </div>
     </>
   )
