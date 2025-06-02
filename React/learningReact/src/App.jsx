@@ -16,6 +16,7 @@ import InlineBox from './components/Learn/inlineStyledBox';
 import Card from './components/Learn/Card/Card';
 import Button from './components/Learn/StyledButton/Button';
 import CardWithChildren from './components/Learn/Component composition/Children Prop/Card';
+import Page from './components/Learn/Component composition/Slots (Named Composition)/Page';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -65,6 +66,16 @@ function App() {
         <h1>Chrollo Lucilfer</h1>
         <p>This is a card with a children props.</p>
       </CardWithChildren>
+      <Page 
+        headerContent={<h1>Justine S. Bayron</h1>} 
+        mainContent={<p>He is a professional hacker that hacked the Philippine government due to frustration of corruptions leaving a quote he dies only after death of humanity.
+          He is a professional hacker that hacked the Philippine government due to frustration of corruptions leaving a quote he dies only after death of humanity.
+          He is a professional hacker that hacked the Philippine government due to frustration of corruptions leaving a quote he dies only after death of humanity.
+          He is a professional hacker that hacked the Philippine government due to frustration of corruptions leaving a quote he dies only after death of humanity.
+          
+        </p>} 
+        footerContent={<p>© 2025</p>}
+      />
     </div>
     </>
   )

@@ -1,8 +1,8 @@
 .Card {
-    margin-top: 15px;
     background-color: black;
-    width: 500px;
+    max-width: 500px;
     height: auto;
+    margin: 10px auto;
     padding: 30px;
 }
 
