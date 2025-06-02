@@ -15,6 +15,7 @@ import Timer from './components/Learn/timer';
 import InlineBox from './components/Learn/inlineStyledBox';
 import Card from './components/Learn/Card/Card';
 import Button from './components/Learn/StyledButton/Button';
+import CardWithChildren from './components/Learn/Component composition/Children Prop/Card';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -59,6 +60,11 @@ function App() {
       <Card></Card>
       <Button buttonName={'Styled Button'} primary={true} setCount={setCount} count={count}></Button>
       <Button buttonName={'Styled Button'} primary={false} setCount={setCount} count={count}></Button>
+      <CardWithChildren>
+        <img src="/src/assets/images/Will.png" alt="Chrollo Lucilfer"/>
+        <h1>Chrollo Lucilfer</h1>
+        <p>This is a card with a children props.</p>
+      </CardWithChildren>
     </div>
     </>
   )
