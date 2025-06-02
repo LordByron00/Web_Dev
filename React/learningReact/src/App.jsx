@@ -17,6 +17,7 @@ import Card from './components/Learn/Card/Card';
 import Button from './components/Learn/StyledButton/Button';
 import CardWithChildren from './components/Learn/Component composition/Children Prop/Card';
 import Page from './components/Learn/Component composition/Slots (Named Composition)/Page';
+import Datafetcher from './components/Learn/Component composition/Component Injection (Render Props)/Datafetcher';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -76,6 +77,7 @@ function App() {
         </p>} 
         footerContent={<p>© 2025</p>}
       />
+      <Datafetcher render={(data) => <p>This is a fetched data: {data.name + " " + data.surname}</p>}></Datafetcher>
     </div>
     </>
   )
