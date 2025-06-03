@@ -18,10 +18,15 @@ import Button from './components/Learn/StyledButton/Button';
 import CardWithChildren from './components/Learn/Component composition/Children Prop/Card';
 import Page from './components/Learn/Component composition/Slots (Named Composition)/Page';
 import Datafetcher from './components/Learn/Component composition/Component Injection (Render Props)/Datafetcher';
+import BoxBorder from './components/Learn/Component composition/Higher-Order Components (HOCs)/BoxBorder';
+import BoxContent from './components/Learn/Component composition/Higher-Order Components (HOCs)/BoxContent';
+
 
 function App() {
   const [count, setCount] = useState(0)
   const [name, setname] = useState('Justine S. Bayron')
+  const PaddedBox = BoxBorder(BoxContent);
+
 
   const authenticated = true;
 
@@ -73,11 +78,14 @@ function App() {
           He is a professional hacker that hacked the Philippine government due to frustration of corruptions leaving a quote he dies only after death of humanity.
           He is a professional hacker that hacked the Philippine government due to frustration of corruptions leaving a quote he dies only after death of humanity.
           He is a professional hacker that hacked the Philippine government due to frustration of corruptions leaving a quote he dies only after death of humanity.
-          
         </p>} 
         footerContent={<p>© 2025</p>}
       />
       <Datafetcher render={(data) => <p>This is a fetched data: {data.name + " " + data.surname}</p>}></Datafetcher>
+      <PaddedBox 
+      header={'Higher-Order Component'} 
+      main={'HOCs are a more functional way to compose behavior, often used for things like auth, theming, etc. You wrap components to enhance them. Just like this one which is wrapped by another component to have a certain style like border and padding'} 
+      footer={'This is confusing so you can use children and props instead'}/>
     </div>
     </>
   )
