@@ -20,7 +20,7 @@ import Page from './components/Learn/Component composition/Slots (Named Composit
 import Datafetcher from './components/Learn/Component composition/Component Injection (Render Props)/Datafetcher';
 import BoxBorder from './components/Learn/Component composition/Higher-Order Components (HOCs)/BoxBorder';
 import BoxContent from './components/Learn/Component composition/Higher-Order Components (HOCs)/BoxContent';
-
+import UseRefTimer from './components/Learn/useRef/TimerUseRef';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -86,6 +86,7 @@ function App() {
       header={'Higher-Order Component'} 
       main={'HOCs are a more functional way to compose behavior, often used for things like auth, theming, etc. You wrap components to enhance them. Just like this one which is wrapped by another component to have a certain style like border and padding'} 
       footer={'This is confusing so you can use children and props instead'}/>
+      <UseRefTimer></UseRefTimer>
     </div>
     </>
   )
