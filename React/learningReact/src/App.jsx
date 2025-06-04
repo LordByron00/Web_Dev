@@ -21,6 +21,7 @@ import Datafetcher from './components/Learn/Component composition/Component Inje
 import BoxBorder from './components/Learn/Component composition/Higher-Order Components (HOCs)/BoxBorder';
 import BoxContent from './components/Learn/Component composition/Higher-Order Components (HOCs)/BoxContent';
 import UseRefTimer from './components/Learn/useRef/TimerUseRef';
+import SignupForm from './components/Learn/FormHandling/SignupForm';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -46,7 +47,7 @@ function App() {
   return (
     <>
     <div>
-      <h2>Learning react from scratch</h2>
+      <h1>Learning react from scratch</h1><br />
       <div className='header'>
         {authenticated ? <Profile name={name}/> : <LoginForm/>}
       </div>
@@ -87,6 +88,7 @@ function App() {
       main={'HOCs are a more functional way to compose behavior, often used for things like auth, theming, etc. You wrap components to enhance them. Just like this one which is wrapped by another component to have a certain style like border and padding'} 
       footer={'This is confusing so you can use children and props instead'}/>
       <UseRefTimer></UseRefTimer>
+      <SignupForm></SignupForm>
     </div>
     </>
   )
