@@ -1,7 +1,6 @@
 import { useState } from "react";
 
-export default function SignupForm() {
-    const [formData, setFormdata] = useState({name: '', email: '', password: ''});
+export default function SignupForm({formData, setFormdata, logged, setLogged}) {
     const [formError, setfromError] = useState('');
 
     //Learning more about JS Object iterations
@@ -30,12 +29,13 @@ export default function SignupForm() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        iterations();
         const isFormEmpty = Object.values(formData).some(value => value.trim() === "");
         if (isFormEmpty) {
             setfromError('Fill all the input fields!');
             return;
         }
+        setLogged(true)
+        iterations();
     }
 
     const handleChange = (e) => {

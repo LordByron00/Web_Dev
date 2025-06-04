@@ -22,12 +22,16 @@ import BoxBorder from './components/Learn/Component composition/Higher-Order Com
 import BoxContent from './components/Learn/Component composition/Higher-Order Components (HOCs)/BoxContent';
 import UseRefTimer from './components/Learn/useRef/TimerUseRef';
 import SignupForm from './components/Learn/FormHandling/SignupForm';
+import UserContext from './components/Learn/useContext/UserContext'
+import UserProfile from './components/Learn/useContext/UserProfile';
 
 function App() {
   const [count, setCount] = useState(0)
   const [name, setname] = useState('Justine S. Bayron')
   const PaddedBox = BoxBorder(BoxContent);
-
+  const [formData, setFormdata] = useState({name: '', email: '', password: ''});
+  const [logged, setLogged] = useState(false);
+  // const [user, setUser] = useState({ name: '', role: ''});
 
   const authenticated = true;
 
@@ -88,7 +92,12 @@ function App() {
       main={'HOCs are a more functional way to compose behavior, often used for things like auth, theming, etc. You wrap components to enhance them. Just like this one which is wrapped by another component to have a certain style like border and padding'} 
       footer={'This is confusing so you can use children and props instead'}/>
       <UseRefTimer></UseRefTimer>
-      <SignupForm></SignupForm>
+      <SignupForm formData={formData} setFormdata={setFormdata} logged={logged} setLogged={setLogged}></SignupForm>
+      { logged && 
+        <UserContext.Provider value={formData}>
+            <UserProfile />
+        </UserContext.Provider>
+      }
     </div>
     </>
   )
