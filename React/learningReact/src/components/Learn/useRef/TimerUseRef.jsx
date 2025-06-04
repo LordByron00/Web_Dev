@@ -1,19 +1,30 @@
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function UseRefTimer() {
-    const useRefTime = useRef(0);
+    const prevOrderCountRef = useRef(0);
+    const [orders, setOrders] = useState(0);
+    const [newOrderNotif, setOrderNotif] = useState('');
 
-    const setTimer = () => {
-        setInterval(() => {
-            useRefTime.current += 1;
-        }, 1000);
+
+    const updateOrders = () => {
+        const randomNum = Math.round(Math.random() * 1);
+        setOrders(orders + randomNum);
     }
+
+    useEffect(() => {
+        if (prevOrderCountRef.current < orders) {
+            setOrderNotif('New Order has arrived!');
+        }
+        prevOrderCountRef.current = orders;
+    }, [orders]);
+
 
     return(
         <>
-            <p>TIMER</p>
-            <p>UseRef Time: {useRefTime.current}</p>
-            <button type="button" onClick={() => setTimer()}>Start</button>
+            <p style={{color: 'red'}} onClick={() => setOrderNotif('')}>{newOrderNotif}</p>
+            <p>ORDERS</p>
+            <p>setState Orders: {orders}</p>
+            <button type="button" onClick={() => updateOrders()}>Fetch Orders</button>
         </>
     );
 }
