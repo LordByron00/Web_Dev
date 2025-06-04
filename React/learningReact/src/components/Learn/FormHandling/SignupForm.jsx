@@ -4,14 +4,38 @@ export default function SignupForm() {
     const [formData, setFormdata] = useState({name: '', email: '', password: ''});
     const [formError, setfromError] = useState('');
 
+    //Learning more about JS Object iterations
+    const iterations = () => {
+        Object.entries(formData).forEach(([key, value]) => {
+            console.log(`key: ${key} value: ${value}`);
+        });
+
+        const MappedForm = Object.fromEntries(Object.entries(formData).map(([key, value]) => (
+            [key, value.toUpperCase()]
+        )));
+
+        console.log(formData);
+        console.log(MappedForm);
+
+        Object.keys(MappedForm).forEach((key) => {
+            console.log(`key: ${key}`)
+        });
+        
+        Object.values(MappedForm).forEach((value) => {
+            console.log(`value: ${value}`)
+        });
+        
+
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
+        iterations();
         const isFormEmpty = Object.values(formData).some(value => value.trim() === "");
         if (isFormEmpty) {
             setfromError('Fill all the input fields!');
             return;
         }
-        console.log(formData);
     }
 
     const handleChange = (e) => {
