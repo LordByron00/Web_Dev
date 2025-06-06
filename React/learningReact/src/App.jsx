@@ -2,18 +2,20 @@ import { useEffect, useState } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import './App.css'
+import { AlertButton, Card }  from './components/Learn';
+
 import MyButton  from './components/MyButton';
 import Profile from './components/Learn/profile';
 import LoginForm from './components/loginForm';
 import CountButton from './components/CountButton';
 import ProfileForm from './components/profileForm';
-import AlertButton from './components/Learn/alertButton';
+// import AlertButton from './components/Learn/alertButton';
 import PreventForm from './components/Learn/PreventForm';
 import LiveInput from './components/Learn/LiveInput';
 import TodoApp from './components/Learn/simpleTodoApp';
 import Timer from './components/Learn/timer';
 import InlineBox from './components/Learn/inlineStyledBox';
-import Card from './components/Learn/Card/Card';
+// import Card from './components/Learn/Card/Card';
 import Button from './components/Learn/StyledButton/Button';
 import CardWithChildren from './components/Learn/Component composition/Children Prop/Card';
 import Page from './components/Learn/Component composition/Slots (Named Composition)/Page';
