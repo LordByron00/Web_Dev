@@ -1,9 +1,10 @@
 export { default as Card } from './Card/Card';
 export { CardWithChildren, Datafetcher, BoxBorder, BoxContent, Page} from './Component composition';
-export { default as SignupForm } from './FormHandling';
-export { default as Button } from './StyledButton';
-export { default as UserProfile } from './UserProfile';
-export { default as UseRefTimer } from './useRef';
+export { default as SignupForm } from './FormHandling/SignupForm';
+export { default as Button } from './StyledButton/Button';
+export { default as UserProfile } from './useContext/UserProfile';
+export { default as UserContext } from './useContext/UserContext';
+export { default as UseRefTimer } from './useRef/TimerUseRef';
 export { default as AlertButton } from './AlertButton';
 export { default as InlineBox } from './inlineStyledBox';
 export { default as LiveInput } from './LiveInput';
