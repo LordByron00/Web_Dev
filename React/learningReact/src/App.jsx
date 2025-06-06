@@ -1,34 +1,9 @@
 import { useEffect, useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
 import './App.css'
 import { AlertButton, Card, SignupForm, MyButton, Profile, LoginForm, 
   CountButton, ProfileForm, PreventForm, LiveInput, TodoApp, Timer, InlineBox, 
   Button, CardWithChildren, Page, Datafetcher, BoxBorder, BoxContent, UseRefTimer, 
   UserContext, UserProfile }  from './components';
-
-// import MyButton  from './components/MyButton';
-// import Profile from './components/Learn/profile';
-// import LoginForm from './components/loginForm';
-// import CountButton from './components/CountButton';
-// import ProfileForm from './components/profileForm';
-// import AlertButton from './components/Learn/alertButton';
-// import PreventForm from './components/Learn/PreventForm';
-// import LiveInput from './components/Learn/LiveInput';
-// import TodoApp from './components/Learn/simpleTodoApp';
-// import Timer from './components/Learn/timer';
-// import InlineBox from './components/Learn/inlineStyledBox';
-
-// import Button from './components/Learn/StyledButton/Button';
-// import CardWithChildren from './components/Learn/Component composition/Children Prop/Card';
-// import Page from './components/Learn/Component composition/Slots (Named Composition)/Page';
-// import Datafetcher from './components/Learn/Component composition/Component Injection (Render Props)/Datafetcher';
-// import BoxBorder from './components/Learn/Component composition/Higher-Order Components (HOCs)/BoxBorder';
-// import BoxContent from './components/Learn/Component composition/Higher-Order Components (HOCs)/BoxContent';
-// import UseRefTimer from './components/Learn/useRef/TimerUseRef';
-// import SignupForm from './components/Learn/FormHandling/SignupForm';
-// import UserContext from './components/Learn/useContext/UserContext'
-// import UserProfile from './components/Learn/useContext/UserProfile';
 
 function App() {
   const [count, setCount] = useState(0)
