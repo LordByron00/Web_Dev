@@ -1,5 +1,6 @@
 export { default as Card } from './Card/Card';
-export { CardWithChildren, Datafetcher, BoxBorder, BoxContent, Page} from './Component composition';
+// eslint-disable-next-line react-refresh/only-export-components
+export * from './Component composition';
 export { default as SignupForm } from './FormHandling/SignupForm';
 export { default as Button } from './StyledButton/Button';
 export { default as UserProfile } from './useContext/UserProfile';
