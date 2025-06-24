@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 
-const filteredList = ({ items }) => {
+const FilteredList = ({ items }) => {
     const [query, setQuery] = useState("");
 
     const filteredItems = useMemo(() => {
@@ -9,12 +9,13 @@ const filteredList = ({ items }) => {
     
     return(
         <>
-            <input type="text" name="" id="" value={query} onChange={e => setQuery(e.target.value)}/>
             <ul>
                 {filteredItems.map(i => <li key={i}>{i}</li>)}
             </ul>
+            <label htmlFor="query">Query: </label>
+            <input type="text" name="query" id="query" value={query} onChange={e => setQuery(e.target.value)}/>
         </>
     );
 }
 
-export default filteredList;
+export default FilteredList;

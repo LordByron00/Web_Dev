@@ -13,6 +13,8 @@ export { default as PreventForm } from './PreventForm';
 export { default as Profile } from './profile';
 export { default as TodoApp } from './simpleTodoApp';
 export { default as Timer } from './timer';
+export { default as FilteredList } from './useMemo/FilteredList';
+
 
 
 
