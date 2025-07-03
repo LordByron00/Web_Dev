@@ -14,6 +14,8 @@ export { default as Profile } from './profile';
 export { default as TodoApp } from './simpleTodoApp';
 export { default as Timer } from './timer';
 export { default as FilteredList } from './useMemo/FilteredList';
+export { default as UseCallbackButton } from './useCallback/useCallback';
+
 
 
 

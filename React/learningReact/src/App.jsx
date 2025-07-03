@@ -3,7 +3,7 @@ import './App.css'
 import { AlertButton, Card, SignupForm, MyButton, Profile, LoginForm, 
   CountButton, ProfileForm, PreventForm, LiveInput, TodoApp, Timer, InlineBox, 
   Button, CardWithChildren, Page, Datafetcher, BoxBorder, BoxContent, UseRefTimer, 
-  UserContext, UserProfile, FilteredList }  from './components';
+  UserContext, UserProfile, FilteredList, UseCallbackButton }  from './components';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -79,6 +79,7 @@ function App() {
         </UserContext.Provider>
       }
       <FilteredList items={['dog', 'cat', 'duck']}></FilteredList>
+      <UseCallbackButton></UseCallbackButton>
     </div>
     </>
   )
