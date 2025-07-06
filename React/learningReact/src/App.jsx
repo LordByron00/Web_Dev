@@ -3,7 +3,7 @@ import './App.css'
 import { AlertButton, Card, SignupForm, MyButton, Profile, LoginForm, 
   CountButton, ProfileForm, PreventForm, LiveInput, TodoApp, Timer, InlineBox, 
   Button, CardWithChildren, Page, Datafetcher, BoxBorder, BoxContent, UseRefTimer, 
-  UserContext, UserProfile, FilteredList, UseCallbackButton }  from './components';
+  UserContext, UserProfile, FilteredList, UseCallbackButton, ThemeContext, ThemePage }  from './components';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,7 +12,7 @@ function App() {
   const [formData, setFormdata] = useState({name: '', email: '', password: ''});
   const [logged, setLogged] = useState(false);
   // const [user, setUser] = useState({ name: '', role: ''});
-
+  const [theme, setTheme] = useState('dark');
   const authenticated = true;
 
   useEffect(() => {
@@ -78,6 +78,9 @@ function App() {
             <UserProfile />
         </UserContext.Provider>
       }
+      <ThemeContext.Provider value={{ theme, setTheme }}>
+        <ThemePage/>
+      </ThemeContext.Provider>
       <FilteredList items={['dog', 'cat', 'duck']}></FilteredList>
       <UseCallbackButton></UseCallbackButton>
     </div>

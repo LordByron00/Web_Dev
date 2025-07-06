@@ -15,6 +15,10 @@ export { default as TodoApp } from './simpleTodoApp';
 export { default as Timer } from './timer';
 export { default as FilteredList } from './useMemo/FilteredList';
 export { default as UseCallbackButton } from './useCallback/useCallback';
+export { default as ThemeContext } from './useContext/ThemeContext';
+export { default as ThemePage } from './useContext/ThemePage';
+
+
 
 
 
