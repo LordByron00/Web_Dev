@@ -1,9 +1,13 @@
 import { useState } from "react";
 
-function useCOunter(count, setCount) {
-    const [count, setCount] = useState(count, setCount);
-    setCount(()=> count + 1);
-    return count;
+function useCounter(initialCount) {
+    const [count, setCount] = useState(initialCount);
+
+    const increment = () => { 
+        setCount(prev => prev + 1);
+    }
+
+    return {count, increment};
 }
 
-export default useCOunter;
+export default useCounter;
