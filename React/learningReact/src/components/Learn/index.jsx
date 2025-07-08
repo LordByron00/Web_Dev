@@ -17,6 +17,8 @@ export { default as FilteredList } from './useMemo/FilteredList';
 export { default as UseCallbackButton } from './useCallback/useCallback';
 export { default as ThemeContext } from './useContext/ThemeContext';
 export { default as ThemePage } from './useContext/ThemePage';
+export { default as useDebounce } from './customHooks/useDebounce';
+
 
 
 
