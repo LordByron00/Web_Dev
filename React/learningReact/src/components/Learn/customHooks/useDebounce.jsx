@@ -10,3 +10,5 @@ function useDebounce(value, delay = 500) {
 
     return debounce;
 }
+
+export default useDebounce;
