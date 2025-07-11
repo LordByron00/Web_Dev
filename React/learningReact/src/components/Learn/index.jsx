@@ -19,6 +19,8 @@ export { default as ThemeContext } from './useContext/ThemeContext';
 export { default as ThemePage } from './useContext/ThemePage';
 export { default as useDebounce } from './customHooks/useDebounce';
 export { default as useCounter } from './customHooks/useCounter';
+export { default as TimerApp } from './Timer/TimerApp';
+
 
 
 

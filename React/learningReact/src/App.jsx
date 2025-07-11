@@ -3,7 +3,7 @@ import './App.css'
 import { AlertButton, Card, SignupForm, MyButton, Profile, LoginForm, 
   CountButton, ProfileForm, PreventForm, LiveInput, TodoApp, Timer, InlineBox, 
   Button, CardWithChildren, Page, Datafetcher, BoxBorder, BoxContent, UseRefTimer, 
-  UserContext, UserProfile, FilteredList, UseCallbackButton, ThemeContext, ThemePage, useDebounce, useCounter }  from './components';
+  UserContext, UserProfile, FilteredList, UseCallbackButton, ThemeContext, ThemePage, useDebounce, useCounter, TimerApp }  from './components';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -88,6 +88,7 @@ function App() {
         <p>useCounter count: {useCounterCount}</p>
         <button onClick={useCounterIncrement}>useCounter Button</button>
       </>
+      <TimerApp></TimerApp>
     </div>
     
     </>
