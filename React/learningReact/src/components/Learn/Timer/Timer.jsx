@@ -14,6 +14,10 @@ function UseTimer (initialTime = 0) {
             clearInterval(interval);
         }
 
+        return () => {
+            clearInterval(interval);
+        }
+
     }, [isActive, isPaused]);
 
     const start = () => {
@@ -22,12 +26,11 @@ function UseTimer (initialTime = 0) {
     }
 
     const pause = () => {
-        setActive(false);
         setPause(true);
+        console.log('paused!')
     }
 
     const resume = () => {
-        setActive(true);
         setPause(false);
     }
 

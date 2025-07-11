@@ -6,10 +6,18 @@ const TimerApp = () => {
     return(
         <>
             <p>{time}</p>
-            <button onClick={start}>Start</button>
-            <button onClick={pause}>pause</button>
-            <button onClick={resume}>resume</button>
-            <button onClick={reset}>reset</button>
+            {!isActive && (
+                <button onClick={start}>Start</button>
+            )}
+            {isActive && !isPaused && (
+                <button onClick={pause}>pause</button>
+            )}
+            {isActive && isPaused && (
+                <button onClick={resume}>resume</button>
+            )}
+            {isActive && (
+                <button onClick={reset}>reset</button>
+            )}
         </>
     );
 }
