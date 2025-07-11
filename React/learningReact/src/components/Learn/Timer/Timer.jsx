@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 
 function UseTimer (initialTime = 0) {
     const [time, setTime] = useState(initialTime)
@@ -20,24 +20,24 @@ function UseTimer (initialTime = 0) {
 
     }, [isActive, isPaused]);
 
-    const start = () => {
+    const start = useCallback( () => {
         setActive(true);
         setPause(false);
-    }
+    }, []);
 
-    const pause = () => {
+    const pause =useCallback( () => {
         setPause(true);
         console.log('paused!')
-    }
+    }, []);
 
-    const resume = () => {
+    const resume = useCallback(() => {
         setPause(false);
-    }
+    }, [])
 
-    const reset = () => {
+    const reset = useCallback(() => {
         setTime(0)
         setActive(false);
-    }
+    }, [])
 
     return {time, isActive, isPaused, start, pause, resume, reset};
 }
